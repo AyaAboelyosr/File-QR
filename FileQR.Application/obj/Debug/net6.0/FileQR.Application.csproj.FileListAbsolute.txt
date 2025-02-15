@@ -1,0 +1,16 @@
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\bin\Debug\net6.0\FileQR.Application.deps.json
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\bin\Debug\net6.0\FileQR.Application.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\bin\Debug\net6.0\FileQR.Application.pdb
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\bin\Debug\net6.0\FileQR.Domain.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\bin\Debug\net6.0\FileQR.Domain.pdb
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\FileQR.Application.csproj.AssemblyReference.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\FileQR.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\FileQR.Application.AssemblyInfoInputs.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\FileQR.Application.AssemblyInfo.cs
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\FileQR.Application.csproj.CoreCompileInputs.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\FileQR.Application.sourcelink.json
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\FileQR.A.1CC238B4.Up2Date
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\FileQR.Application.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\refint\FileQR.Application.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\FileQR.Application.pdb
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Application\obj\Debug\net6.0\ref\FileQR.Application.dll

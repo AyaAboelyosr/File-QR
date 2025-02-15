@@ -1,0 +1,14 @@
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\bin\Debug\net6.0\FileQR.Domain.deps.json
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\bin\Debug\net6.0\FileQR.Domain.runtimeconfig.json
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\bin\Debug\net6.0\FileQR.Domain.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\bin\Debug\net6.0\FileQR.Domain.pdb
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\FileQR.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\FileQR.Domain.AssemblyInfoInputs.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\FileQR.Domain.AssemblyInfo.cs
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\FileQR.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\FileQR.Domain.sourcelink.json
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\FileQR.Domain.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\refint\FileQR.Domain.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\FileQR.Domain.pdb
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\FileQR.Domain.genruntimeconfig.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Domain\obj\Debug\net6.0\ref\FileQR.Domain.dll
