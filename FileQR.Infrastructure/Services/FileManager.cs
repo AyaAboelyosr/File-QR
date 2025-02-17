@@ -54,7 +54,6 @@ namespace FileQR.Infrastructure.Services
             {
                 string containerPath = Path.Combine(_basePath, containerName);
 
-                // Ensure the container directory exists
                 if (!Directory.Exists(containerPath))
                 {
                     Directory.CreateDirectory(containerPath);
@@ -62,7 +61,6 @@ namespace FileQR.Infrastructure.Services
 
                 string fullPath = Path.Combine(containerPath, filePath);
 
-                // Save the file to the local file system
                 using (var outputFileStream = System.IO.File.Create(fullPath))
                 {
                     await fileStream.CopyToAsync(outputFileStream);

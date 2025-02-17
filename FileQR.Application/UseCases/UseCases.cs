@@ -1,38 +1,36 @@
-﻿using FileQR.Domain.Entities;
+﻿using FileQR.Application.Helpers;
 using FileQR.Application.Interfaces;
+using iText.IO.Font;
 using iText.IO.Image;
+using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
-using QRCoder;
-using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Png;
-using SixLabors.Fonts;
-using SixLabors.ImageSharp.Drawing.Processing;
-using SixLabors.ImageSharp.Processing;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Reflection.Metadata;
-using System.Reflection.PortableExecutable;
-using FileQR.Domain.Entities;
-using System.Drawing;
-using FileQR.Application.Helpers;
-using iText.Kernel.Font;
-using iText.IO.Font;
+
 namespace FileQR.Application.UseCases
 {
     public class AddQRCodeUseCase
     {
         private readonly IFileManager _fileManager;
         private readonly IQRSettingsService _qrSettingsService;
+        private readonly IQRCodeGeneration _qrCodeGeneration;
+        private readonly IImageConversion _imageConversion;
+        private readonly IMeasurementConverter _measurementConverter;
 
-        public AddQRCodeUseCase(IFileManager fileManager, IQRSettingsService qrSettingsService)
+        public AddQRCodeUseCase(IFileManager fileManager, IQRSettingsService qrSettingsService, IQRCodeGeneration qrCodeGeneration, IImageConversion imageConversion, IMeasurementConverter measurementConverter)
         {
             _fileManager = fileManager;
             _qrSettingsService = qrSettingsService;
+            _qrCodeGeneration = qrCodeGeneration;
+            _imageConversion = imageConversion;
+            _measurementConverter = measurementConverter;
         }
 
         public async Task<string> Execute(Domain.Entities.File fileObject)
@@ -65,7 +63,8 @@ namespace FileQR.Application.UseCases
                 QRContent += $"https://tamr-dms.azurewebsites.net/Home/FileInfo/{fileObject.Id}";
 
             // Step 3: Generate QR code image
-            SixLabors.ImageSharp.Image qrImage = GenerateQRCodeImage(QRContent);
+            Bitmap qrBitmap = _qrCodeGeneration.GenerateQRCodeImage(QRContent);
+            SixLabors.ImageSharp.Image qrImage = _imageConversion.ConvertToImageSharpImage(qrBitmap);
             ImageData qrImageData = GetImageDataFactory(qrImage);
 
             // Step 4: Add QR code to the PDF
@@ -112,10 +111,9 @@ namespace FileQR.Application.UseCases
                     }
 
                     // Convert measurements to points
-                    float dpi = 72;
-                    float leftInPoints = left * dpi / 2.54f;
-                    float bottomInPoints = bottom * dpi / 2.54f;
-                    float widthInPoints = width * dpi / 2.54f;
+                    float leftInPoints = _measurementConverter.ConvertToPoints(left);
+                    float bottomInPoints = _measurementConverter.ConvertToPoints(bottom);
+                    float widthInPoints = _measurementConverter.ConvertToPoints(width);
 
                     // Add text and QR code to the page
                     var text1Paragraph = new Paragraph(qs.MessageToShowInImage).SetFont(textFont).SetFontSize(8);
@@ -152,59 +150,6 @@ namespace FileQR.Application.UseCases
             var imgStream = new MemoryStream();
             img.Save(imgStream, new PngEncoder());
             return ImageDataFactory.Create(imgStream.ToArray());
-        }
-
-        private SixLabors.ImageSharp.Image GenerateQRCodeImage(string text)
-        {
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(text, QRCodeGenerator.ECCLevel.Q);
-
-            // Load the icon using SixLabors.ImageSharp
-            SixLabors.ImageSharp.Image icon = SixLabors.ImageSharp.Image.Load("assets/icon.png");
-
-            // Convert SixLabors.ImageSharp.Image to System.Drawing.Bitmap
-            System.Drawing.Bitmap iconBitmap = ConvertToBitmap(icon);
-
-            // Define the colors directly using System.Drawing.Color
-            System.Drawing.Color blackColor = System.Drawing.Color.Black;
-            System.Drawing.Color whiteColor = System.Drawing.Color.White;
-
-            // Create the QR code using QRCoder
-            QRCoder.QRCode qrCode = new QRCoder.QRCode(qrCodeData);
-
-            // Generate the QR code image
-            var qrCodeBitmap = qrCode.GetGraphic(
-                pixelsPerModule: 4,
-                darkColor: blackColor,
-                lightColor: whiteColor,
-                icon: iconBitmap,
-                iconSizePercent: 20,
-                iconBorderWidth: 2,
-                drawQuietZones: false
-            );
-
-            // Convert the System.Drawing.Bitmap back to SixLabors.ImageSharp.Image
-            return ConvertToImageSharpImage(qrCodeBitmap);
-        }
-
-        private System.Drawing.Bitmap ConvertToBitmap(SixLabors.ImageSharp.Image image)
-        {
-            using (var memoryStream = new MemoryStream())
-            {
-                image.Save(memoryStream, new PngEncoder());
-                memoryStream.Seek(0, SeekOrigin.Begin);
-                return new System.Drawing.Bitmap(memoryStream);
-            }
-        }
-
-        private SixLabors.ImageSharp.Image ConvertToImageSharpImage(System.Drawing.Bitmap bitmap)
-        {
-            using (var memoryStream = new MemoryStream())
-            {
-                bitmap.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
-                memoryStream.Seek(0, SeekOrigin.Begin);
-                return SixLabors.ImageSharp.Image.Load(memoryStream);
-            }
         }
     }
 }

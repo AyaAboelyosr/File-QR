@@ -29,6 +29,10 @@ public class Program
         // Register QRSettingsService
         builder.Services.AddScoped<IQRSettingsService, QRSettingsService>();
 
+      builder.Services.AddScoped<IQRCodeGeneration, QRCodeGenerationService>();
+       builder.Services.AddScoped<IImageConversion, ImageConversionService>();
+        builder.Services.AddScoped<IMeasurementConverter, MeasurementConverterService>();
+
         // Add Swagger for API documentation
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();

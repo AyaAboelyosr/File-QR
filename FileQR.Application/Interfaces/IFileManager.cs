@@ -9,6 +9,7 @@ namespace FileQR.Application.Interfaces
 {
     public interface IFileManager
     {
+        
         Task<BlobResult?> DownloadFileAsync(string filePath, string containerName);
         Task UploadFileAsync(Stream fileStream, string filePath, string containerName, string contentType);
     }
