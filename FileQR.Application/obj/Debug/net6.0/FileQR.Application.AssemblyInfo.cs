@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileQR.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bc6a09bebaf8a2c5bee2e954677f77760cebe73")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbb8b7ff426a116d220018b4b0a265cf31f6b99b")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileQR.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileQR.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
