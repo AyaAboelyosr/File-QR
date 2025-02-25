@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileQR.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbb8b7ff426a116d220018b4b0a265cf31f6b99b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6694db89874b413b5e607ab0128b474343056dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileQR.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileQR.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
