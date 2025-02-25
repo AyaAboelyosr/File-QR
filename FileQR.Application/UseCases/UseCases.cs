@@ -4,6 +4,8 @@ using iText.IO.Font;
 using iText.IO.Image;
 using iText.Kernel.Font;
 using iText.Kernel.Pdf;
+using iText.Kernel.Pdf.Action;
+using iText.Kernel.Pdf.Annot;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
@@ -67,6 +69,7 @@ namespace FileQR.Application.UseCases
             SixLabors.ImageSharp.Image qrImage = _imageConversion.ConvertToImageSharpImage(qrBitmap);
             ImageData qrImageData = GetImageDataFactory(qrImage);
 
+
             // Step 4: Add QR code to the PDF
             using (var pdfReader = new PdfReader(origFileStream))
             using (var pdfWriter = new PdfWriter(tempFilePath))
@@ -77,6 +80,10 @@ namespace FileQR.Application.UseCases
                 // Load font for text
                 string fontPath = Path.Combine(Environment.CurrentDirectory, "fonts", "TAHOMA.TTF");
                 var textFont = PdfFontFactory.CreateFont(fontPath, PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.PREFER_EMBEDDED);
+
+                // Extract the link from the QR content
+                string qrLink = QRContent.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
+                                         .LastOrDefault(line => line.StartsWith("http"));
 
                 // Add QR code and text to each page
                 for (int pageNo = 1; pageNo <= pdfDocument.GetNumberOfPages(); pageNo++)
@@ -120,9 +127,21 @@ namespace FileQR.Application.UseCases
                     text1Paragraph.SetFixedPosition(pageNo, leftInPoints, bottomInPoints + widthInPoints + 10, 200);
                     document.Add(text1Paragraph);
 
+                    // Create the QR code image
                     iText.Layout.Element.Image qrPdfImage = new iText.Layout.Element.Image(qrImageData)
                         .SetFixedPosition(pageNo, leftInPoints, bottomInPoints, widthInPoints);
+
+                    // Add the QR code image to the document
                     document.Add(qrPdfImage);
+
+                    // Add a clickable link annotation to the QR code
+                    if (!string.IsNullOrEmpty(qrLink))
+                    {
+                        PdfPage page = pdfDocument.GetPage(pageNo);
+                        PdfLinkAnnotation linkAnnotation = new PdfLinkAnnotation(new iText.Kernel.Geom.Rectangle(leftInPoints, bottomInPoints, widthInPoints, widthInPoints))
+                            .SetAction(PdfAction.CreateURI(qrLink));
+                        page.AddAnnotation(linkAnnotation);
+                    }
 
                     var text2Paragraph = new Paragraph($"{authByLabel}: {fileObject.AuthRequiredFromUser?.DisplayName}")
                         .SetFont(textFont).SetFontSize(8);
