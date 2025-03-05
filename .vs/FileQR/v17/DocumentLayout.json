@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B13AD9D9-3242-4F93-AA6F-4683A57F0AD0}|FileQR.Infrastructure\\FileQR.Infrastructure.csproj|c:\\users\\electronica care\\downloads\\cleanarchitectureqrcode- task\\fileqr\\fileqr.infrastructure\\services\\imageconversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B13AD9D9-3242-4F93-AA6F-4683A57F0AD0}|FileQR.Infrastructure\\FileQR.Infrastructure.csproj|solutionrelative:fileqr.infrastructure\\services\\imageconversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32418AC-ABEC-427B-AC14-EDD102BB6C79}|FileQR.Application\\FileQR.Application.csproj|c:\\users\\electronica care\\downloads\\cleanarchitectureqrcode- task\\fileqr\\fileqr.application\\usecases\\usecases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32418AC-ABEC-427B-AC14-EDD102BB6C79}|FileQR.Application\\FileQR.Application.csproj|solutionrelative:fileqr.application\\usecases\\usecases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D3CB2A4-23A0-4517-8A70-F1C72B516120}|FileQR.Presentation\\FileQR.Presentation.csproj|c:\\users\\electronica care\\downloads\\cleanarchitectureqrcode- task\\fileqr\\fileqr.presentation\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D3CB2A4-23A0-4517-8A70-F1C72B516120}|FileQR.Presentation\\FileQR.Presentation.csproj|solutionrelative:fileqr.presentation\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D3CB2A4-23A0-4517-8A70-F1C72B516120}|FileQR.Presentation\\FileQR.Presentation.csproj|c:\\users\\electronica care\\downloads\\cleanarchitectureqrcode- task\\fileqr\\fileqr.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D3CB2A4-23A0-4517-8A70-F1C72B516120}|FileQR.Presentation\\FileQR.Presentation.csproj|solutionrelative:fileqr.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03B64B8-3E8C-4CF6-9013-D053AF7ADBDC}|FileQR.Domain\\FileQR.Domain.csproj|c:\\users\\electronica care\\downloads\\cleanarchitectureqrcode- task\\fileqr\\fileqr.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03B64B8-3E8C-4CF6-9013-D053AF7ADBDC}|FileQR.Domain\\FileQR.Domain.csproj|solutionrelative:fileqr.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03B64B8-3E8C-4CF6-9013-D053AF7ADBDC}|FileQR.Domain\\FileQR.Domain.csproj|c:\\users\\electronica care\\downloads\\cleanarchitectureqrcode- task\\fileqr\\fileqr.domain\\entities\\qrsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03B64B8-3E8C-4CF6-9013-D053AF7ADBDC}|FileQR.Domain\\FileQR.Domain.csproj|solutionrelative:fileqr.domain\\entities\\qrsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03B64B8-3E8C-4CF6-9013-D053AF7ADBDC}|FileQR.Domain\\FileQR.Domain.csproj|c:\\users\\electronica care\\downloads\\cleanarchitectureqrcode- task\\fileqr\\fileqr.domain\\entities\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03B64B8-3E8C-4CF6-9013-D053AF7ADBDC}|FileQR.Domain\\FileQR.Domain.csproj|solutionrelative:fileqr.domain\\entities\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D32418AC-ABEC-427B-AC14-EDD102BB6C79}|FileQR.Application\\FileQR.Application.csproj|c:\\users\\electronica care\\downloads\\cleanarchitectureqrcode- task\\fileqr\\fileqr.application\\dtos\\qrcontentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D32418AC-ABEC-427B-AC14-EDD102BB6C79}|FileQR.Application\\FileQR.Application.csproj|solutionrelative:fileqr.application\\dtos\\qrcontentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B13AD9D9-3242-4F93-AA6F-4683A57F0AD0}|FileQR.Infrastructure\\FileQR.Infrastructure.csproj|c:\\users\\electronica care\\downloads\\cleanarchitectureqrcode- task\\fileqr\\fileqr.infrastructure\\services\\qrsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B13AD9D9-3242-4F93-AA6F-4683A57F0AD0}|FileQR.Infrastructure\\FileQR.Infrastructure.csproj|solutionrelative:fileqr.infrastructure\\services\\qrsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ImageConversionService.cs",
+              "DocumentMoniker": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Infrastructure\\Services\\ImageConversionService.cs",
+              "RelativeDocumentMoniker": "FileQR.Infrastructure\\Services\\ImageConversionService.cs",
+              "ToolTip": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Infrastructure\\Services\\ImageConversionService.cs",
+              "RelativeToolTip": "FileQR.Infrastructure\\Services\\ImageConversionService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T01:27:25.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "FileQR.Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Presentation\\Program.cs",
+              "RelativeToolTip": "FileQR.Presentation\\Program.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwGAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T00:42:19.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "FileQR.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "FileQR.Domain\\Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T00:16:29.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QRSetting.cs",
+              "DocumentMoniker": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Domain\\Entities\\QRSetting.cs",
+              "RelativeDocumentMoniker": "FileQR.Domain\\Entities\\QRSetting.cs",
+              "ToolTip": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Domain\\Entities\\QRSetting.cs",
+              "RelativeToolTip": "FileQR.Domain\\Entities\\QRSetting.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAzwBYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T00:16:09.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileController.cs",
+              "DocumentMoniker": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Presentation\\Controllers\\FileController.cs",
+              "RelativeDocumentMoniker": "FileQR.Presentation\\Controllers\\FileController.cs",
+              "ToolTip": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Presentation\\Controllers\\FileController.cs",
+              "RelativeToolTip": "FileQR.Presentation\\Controllers\\FileController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T23:59:24.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QRContentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Application\\DTOs\\QRContentDTO.cs",
+              "RelativeDocumentMoniker": "FileQR.Application\\DTOs\\QRContentDTO.cs",
+              "ToolTip": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Application\\DTOs\\QRContentDTO.cs",
+              "RelativeToolTip": "FileQR.Application\\DTOs\\QRContentDTO.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T23:35:28.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "QRSettingsService.cs",
+              "DocumentMoniker": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Infrastructure\\Services\\QRSettingsService.cs",
+              "RelativeDocumentMoniker": "FileQR.Infrastructure\\Services\\QRSettingsService.cs",
+              "ToolTip": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Infrastructure\\Services\\QRSettingsService.cs",
+              "RelativeToolTip": "FileQR.Infrastructure\\Services\\QRSettingsService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAADwvwwAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T23:04:43.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "File.cs",
+              "DocumentMoniker": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Domain\\Entities\\File.cs",
+              "RelativeDocumentMoniker": "FileQR.Domain\\Entities\\File.cs",
+              "ToolTip": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Domain\\Entities\\File.cs",
+              "RelativeToolTip": "FileQR.Domain\\Entities\\File.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA1wCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T21:51:46.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UseCases.cs",
+              "DocumentMoniker": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Application\\UseCases\\UseCases.cs",
+              "RelativeDocumentMoniker": "FileQR.Application\\UseCases\\UseCases.cs",
+              "ToolTip": "C:\\Users\\Electronica Care\\Downloads\\CleanArchitectureQRCode- Task\\FileQR\\FileQR.Application\\UseCases\\UseCases.cs",
+              "RelativeToolTip": "FileQR.Application\\UseCases\\UseCases.cs",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAuwNAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T21:51:29.295Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
