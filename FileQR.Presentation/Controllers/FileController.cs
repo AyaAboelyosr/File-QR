@@ -29,7 +29,7 @@ namespace FileQR.Presentation.Controllers
             if (string.IsNullOrEmpty(fileObject))
                 return BadRequest("File object is null or empty.");
 
-            // Deserialize the fileObject JSON string
+           
             Domain.Entities.File fileObj;
             try
             {
@@ -43,10 +43,9 @@ namespace FileQR.Presentation.Controllers
             if (fileObj == null || fileObj.QRSetting == null)
                 return BadRequest("File object or QR settings not found.");
 
-            // Step 1: Convert IFormFile to Stream
             using var fileStream = file.OpenReadStream();
 
-            // Step 2: Map Domain.Entities.File and QRSetting to QRContentDTO
+           
             var qrContent = new QRContentDTO
             {
                 ShowArabicNames = fileObj.QRSetting.ShowArabicNames,
@@ -56,7 +55,7 @@ namespace FileQR.Presentation.Controllers
                 QRShowLink = fileObj.QRSetting.QRShowLink,
                 AuthRequiredFromUser = fileObj.QRSetting.ShowArabicNames
                     ? fileObj.AuthRequiredFromUser?.ArabicDisplayName
-                    : fileObj.AuthRequiredFromUser?.DisplayName, // Use ArabicDisplayName if ShowArabicNames is true
+                    : fileObj.AuthRequiredFromUser?.DisplayName, 
                 IssuedFor = fileObj.IssuedFor,
                 MessageToShowInImage = fileObj.QRSetting.MessageToShowInImage,
                 QRLeft = fileObj.QRSetting.QRLeft,

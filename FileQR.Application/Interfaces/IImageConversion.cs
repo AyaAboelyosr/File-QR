@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 
 namespace FileQR.Application.Interfaces
 {
     public interface IImageConversion
     {
-        SixLabors.ImageSharp.Image ConvertToImageSharpImage(Bitmap bitmap);
-        Bitmap ConvertToBitmap(SixLabors.ImageSharp.Image image);
+        SixLabors.ImageSharp.Image<Rgba32> ConvertToImageSharpImage(Bitmap bitmap);
+        Bitmap ConvertToBitmap(SixLabors.ImageSharp.Image<Rgba32> image);
     }
 }

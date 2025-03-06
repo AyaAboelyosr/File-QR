@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FileQR.Application.Interfaces
 {
-      public interface IQRCodeGeneration
+    public interface IQRCodeGeneration
     {
         Bitmap GenerateQRCodeImage(string text);
     }

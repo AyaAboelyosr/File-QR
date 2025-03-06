@@ -14,11 +14,11 @@ namespace FileQR.Infrastructure.Services
 
         public QRSettingsService()
         {
-            // Initialize QRSettings (e.g., from a database or configuration)
+           
             QRSettings = new List<QRSetting>
         {
             new QRSetting { ID = 1, ShowArabicNames = true, QRShowAuthBy = true, QRShowIssueDate = true, QRShowIssuedFor = true, QRShowLink = true, MessageToShowInImage = "Authorized By" },
-            // Add more QR settings as needed
+         
         };
         }
     }
