@@ -7,14 +7,18 @@ using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Action;
 using iText.Kernel.Pdf.Annot;
+using iText.Kernel.Pdf.Navigation;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using Microsoft.Extensions.Logging;
 using SixLabors.ImageSharp.Formats.Png;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
+
+
 
 namespace FileQR.Application.UseCases
 {
@@ -25,47 +29,57 @@ namespace FileQR.Application.UseCases
         private readonly IQRCodeGeneration _qrCodeGeneration;
         private readonly IImageConversion _imageConversion;
         private readonly IMeasurementConverter _measurementConverter;
+        private readonly ILogger<AddQRCodeUseCase> _logger;
 
-        public AddQRCodeUseCase(IFileManager fileManager, IQRSettingsService qrSettingsService, IQRCodeGeneration qrCodeGeneration, IImageConversion imageConversion, IMeasurementConverter measurementConverter)
+        public AddQRCodeUseCase(IFileManager fileManager, IQRSettingsService qrSettingsService, IQRCodeGeneration qrCodeGeneration, IImageConversion imageConversion, IMeasurementConverter measurementConverter , ILogger<AddQRCodeUseCase> logger)
         {
             _fileManager = fileManager;
             _qrSettingsService = qrSettingsService;
             _qrCodeGeneration = qrCodeGeneration;
             _imageConversion = imageConversion;
             _measurementConverter = measurementConverter;
+            _logger = logger;
         }
 
-        public async Task<string> Execute(Stream fileStream, string fileUrl, QRContentDTO content)
+      public async Task<string> Execute(Stream fileStream, string fileUrl, QRContentDTO content)
+{
+    if (fileStream == null || fileStream.Length == 0)
+        throw new ArgumentException("File stream is empty or null.");
+
+    var tempFilePath = Path.Combine("uploadDir", RandomGenerator.GenerateRandomString(5) + ".pdf");
+
+    try
+    {
+       
+        (string qrContent, string authByLabel) = GenerateQRCodeContent(content, fileUrl);
+
+       
+        var qrImageData = GenerateQRCodeImage(qrContent);
+
+       
+        AddQRCodeToPdf(fileStream, tempFilePath, qrImageData, content, qrContent, authByLabel, fileUrl);
+
+   
+        await UploadFile(tempFilePath, fileUrl);
+
+        return "QR code added successfully.";
+    }
+    finally
+    {
+        if (System.IO.File.Exists(tempFilePath))
         {
-            if (fileStream == null || fileStream.Length == 0)
-                throw new ArgumentException("File stream is empty or null.");
-
-            var tempFilePath = Path.Combine("uploadDir", RandomGenerator.GenerateRandomString(5) + ".pdf");
-
             try
             {
-                // Step 1: Generate QR code content
-                (string qrContent, string authByLabel) = GenerateQRCodeContent(content, fileUrl);
-
-                // Step 2: Generate QR code image
-                var qrImageData = GenerateQRCodeImage(qrContent);
-
-                // Step 3: Add QR code to the PDF
-                AddQRCodeToPdf(fileStream, tempFilePath, qrImageData, content, qrContent, authByLabel, fileUrl);
-
-                // Step 4: Upload the modified file
-                await UploadFile(tempFilePath, fileUrl);
-
-                return "QR code added successfully.";
+                System.IO.File.Delete(tempFilePath);
             }
-            finally
+            catch (IOException ex)
             {
-                // Clean up temporary file
-                if (System.IO.File.Exists(tempFilePath))
-                    System.IO.File.Delete(tempFilePath);
+              
+                _logger.LogError(ex, "Failed to delete temporary file: {FilePath}", tempFilePath);
             }
         }
-
+    }
+}
         private (string qrContent, string authByLabel) GenerateQRCodeContent(QRContentDTO content, string fileUrl)
         {
             string authByLabel = content.ShowArabicNames ? "معتمد من" : "Authorized By";
@@ -94,37 +108,44 @@ namespace FileQR.Application.UseCases
 
         private void AddQRCodeToPdf(Stream fileStream, string tempFilePath, ImageData qrImageData, QRContentDTO content, string qrContent, string authByLabel, string fileUrl)
         {
-            using (var pdfReader = new PdfReader(fileStream))
-            using (var pdfWriter = new PdfWriter(tempFilePath))
-            using (var pdfDocument = new PdfDocument(pdfReader, pdfWriter))
+            try
             {
-                iText.Layout.Document document = new iText.Layout.Document(pdfDocument);
-
-                // Load font for text
-                string fontPath = Path.Combine(Environment.CurrentDirectory, "fonts", "TAHOMA.TTF");
-                var textFont = PdfFontFactory.CreateFont(fontPath, PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.PREFER_EMBEDDED);
-
-                // Add QR code and text to each page
-                for (int pageNo = 1; pageNo <= pdfDocument.GetNumberOfPages(); pageNo++)
+                using (var pdfReader = new PdfReader(fileStream))
+                using (var pdfWriter = new PdfWriter(tempFilePath))
+                using (var pdfDocument = new PdfDocument(pdfReader, pdfWriter))
                 {
-                    if (!ShouldAddQRCodeToPage(pageNo, content, pdfDocument))
-                        continue;
+                    iText.Layout.Document document = new iText.Layout.Document(pdfDocument);
 
-                    var (left, bottom, width) = GetPagePositions(pageNo, content, pdfDocument);
+               
+                    string fontPath = Path.Combine(Environment.CurrentDirectory, "fonts", "TAHOMA.TTF");
+                    var textFont = PdfFontFactory.CreateFont(fontPath, PdfEncodings.IDENTITY_H, PdfFontFactory.EmbeddingStrategy.PREFER_EMBEDDED);
 
-                    // Convert measurements to points
-                    float leftInPoints = _measurementConverter.ConvertToPoints(left);
-                    float bottomInPoints = _measurementConverter.ConvertToPoints(bottom);
-                    float widthInPoints = _measurementConverter.ConvertToPoints(width);
+               
+                    for (int pageNo = 1; pageNo <= pdfDocument.GetNumberOfPages(); pageNo++)
+                    {
+                        if (!ShouldAddQRCodeToPage(pageNo, content, pdfDocument))
+                            continue;
 
-                    // Add text and QR code to the page
-                    AddTextAndQRCodeToPage(document, pageNo, qrImageData, content, textFont, fileUrl, leftInPoints, bottomInPoints, widthInPoints, authByLabel, pdfDocument);
+                        var (left, bottom, width) = GetPagePositions(pageNo, content, pdfDocument);
+
+                      
+                        float leftInPoints = _measurementConverter.ConvertToPoints(left);
+                        float bottomInPoints = _measurementConverter.ConvertToPoints(bottom);
+                        float widthInPoints = _measurementConverter.ConvertToPoints(width);
+
+                       
+                        AddTextAndQRCodeToPage(document, pageNo, qrImageData, content, textFont, fileUrl, leftInPoints, bottomInPoints, widthInPoints, authByLabel, pdfDocument);
+                    }
+
+                    document.Close();
                 }
-
-                document.Close();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to add QR code to PDF: {FilePath}", tempFilePath);
+                throw; 
             }
         }
-
         private bool ShouldAddQRCodeToPage(int pageNo, QRContentDTO content, PdfDocument pdfDocument)
         {
             if (pageNo == 1 && !content.ShowFirstPage)
@@ -165,37 +186,49 @@ namespace FileQR.Application.UseCases
 
         private void AddTextAndQRCodeToPage(iText.Layout.Document document, int pageNo, ImageData qrImageData, QRContentDTO content, PdfFont textFont, string fileUrl, float leftInPoints, float bottomInPoints, float widthInPoints, string authByLabel, PdfDocument pdfDocument)
         {
+          
             var text1Paragraph = new Paragraph(content.MessageToShowInImage).SetFont(textFont).SetFontSize(8);
             text1Paragraph.SetFixedPosition(pageNo, leftInPoints, bottomInPoints + widthInPoints + 10, 200);
             document.Add(text1Paragraph);
 
-            // Create the QR code image
+            
             iText.Layout.Element.Image qrPdfImage = new iText.Layout.Element.Image(qrImageData)
                 .SetFixedPosition(pageNo, leftInPoints, bottomInPoints, widthInPoints);
 
-            // Add the QR code image to the document
+           
             document.Add(qrPdfImage);
 
-            // Add a clickable link annotation to the QR code
-            if (!string.IsNullOrEmpty(fileUrl))
-            {
-                PdfPage page = pdfDocument.GetPage(pageNo);
-                PdfLinkAnnotation linkAnnotation = new PdfLinkAnnotation(new iText.Kernel.Geom.Rectangle(leftInPoints, bottomInPoints, widthInPoints, widthInPoints))
-                    .SetAction(PdfAction.CreateURI(fileUrl));
-                page.AddAnnotation(linkAnnotation);
-            }
+           
+            PdfPage page = pdfDocument.GetPage(pageNo);
+            PdfExplicitDestination destination = PdfExplicitDestination.CreateFit(page);
 
+            
+            PdfLinkAnnotation linkAnnotation = new PdfLinkAnnotation(new iText.Kernel.Geom.Rectangle(leftInPoints, bottomInPoints, widthInPoints, widthInPoints))
+                .SetAction(PdfAction.CreateGoTo(destination));
+            page.AddAnnotation(linkAnnotation);
+
+            
             var text2Paragraph = new Paragraph($"{authByLabel}: {content.AuthRequiredFromUser}")
                 .SetFont(textFont).SetFontSize(8);
             text2Paragraph.SetFixedPosition(pageNo, leftInPoints, bottomInPoints - 10, 200);
             document.Add(text2Paragraph);
         }
-
         private async Task UploadFile(string tempFilePath, string fileUrl)
         {
-            using (var authFileStream = System.IO.File.OpenRead(tempFilePath))
+            try
             {
-                await _fileManager.UploadFileAsync(authFileStream, fileUrl, "authContainerName", "application/pdf");
+              
+                using (var authFileStream = new FileStream(tempFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                  
+                    await _fileManager.UploadFileAsync(authFileStream, fileUrl, "authContainerName", "application/pdf");
+                } 
+            }
+            catch (Exception ex)
+            {
+               
+                _logger.LogError(ex, "Failed to upload file: {FilePath}", tempFilePath);
+                throw;
             }
         }
 

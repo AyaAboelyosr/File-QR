@@ -1,11 +1,3 @@
-C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.csproj.AssemblyReference.cache
-C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.AssemblyInfoInputs.cache
-C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.AssemblyInfo.cs
-C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.sourcelink.json
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\appsettings.json
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\FileQR.Presentation.exe
@@ -13,6 +5,7 @@ C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\FileQR.Presentation.runtimeconfig.json
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\FileQR.Presentation.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\FileQR.Presentation.pdb
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\itext.barcodes.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\itext.bouncy-castle-connector.dll
@@ -25,6 +18,7 @@ C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\itext.sign.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\itext.styledxmlparser.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\itext.svg.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\itext.bouncy-castle-adapter.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\itext.commons.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
@@ -43,6 +37,7 @@ C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\QRCoder.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\UnityEngine.dll
@@ -59,6 +54,7 @@ C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\System.Runtime.Caching.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\System.Windows.Extensions.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -66,8 +62,12 @@ C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\FileQR.Application.dll
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\FileQR.Domain.dll
@@ -75,6 +75,14 @@ C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\FileQR.Application.pdb
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\FileQR.Infrastructure.pdb
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\bin\Debug\net6.0\FileQR.Domain.pdb
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.csproj.AssemblyReference.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.AssemblyInfoInputs.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.AssemblyInfo.cs
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\FileQR.Presentation.sourcelink.json
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Electronica Care\Downloads\CleanArchitectureQRCode- Task\FileQR\FileQR.Presentation\obj\Debug\net6.0\staticwebassets\msbuild.FileQR.Presentation.Microsoft.AspNetCore.StaticWebAssets.props

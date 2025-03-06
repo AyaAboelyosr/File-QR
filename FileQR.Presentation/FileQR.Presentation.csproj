@@ -23,4 +23,8 @@
 		<ProjectReference Include="..\FileQR.Infrastructure\FileQR.Infrastructure.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="uploadDir\" />
+	</ItemGroup>
+
 </Project>

@@ -14,6 +14,7 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        builder.Services.AddLogging();
 
         // Add services to the container.
         builder.Services.AddControllers();
@@ -25,6 +26,7 @@ public class Program
         // Register DbContext
         builder.Services.AddDbContext<ApplicationDBContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+       
 
         // Register QRSettingsService
         builder.Services.AddScoped<IQRSettingsService, QRSettingsService>();
@@ -84,9 +86,17 @@ public class Program
             FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(uploadsPath),
             RequestPath = "/Uploads"
         });
-
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        else
+        {
+            app.UseExceptionHandler("/error");
+            app.UseHsts();
+        }
         // Global error handling
-        app.UseExceptionHandler("/error");
+       // app.UseExceptionHandler("/error");
 
         app.UseHttpsRedirection();
         app.UseAuthorization();
